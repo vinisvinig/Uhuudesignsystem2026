@@ -75,15 +75,15 @@ const PALETTES: Record<string, { hex: string; brand?: number; scale: string[] }>
   primaria:  { hex: "#EE3680", brand: 400, scale: ["#FFF1F6","#FFE3EC","#FFC2D9","#FF95BC","#EE3680","#D91E63","#B81652","#921141","#6E0B30","#4A081F","#2A0411"] },
   secundaria:{ hex: "#8036EE", brand: 500, scale: ["#F4EEFF","#E8DDFF","#D2B9FF","#B58CFF","#9A60FA","#8036EE","#6A1FD3","#5418A8","#3F127E","#2A0C54","#15062A"] },
   neutro:    { hex: "#252525", brand: 800, scale: ["#FAFAFA","#F5F5F5","#E8E8E8","#D4D4D4","#A3A3A3","#737373","#525252","#3D3D3D","#252525","#171717","#0A0A0A"] },
-  sucesso:   { hex: "#22C55E", brand: 500, scale: ["#F0FDF4","#DCFCE7","#BBF7D0","#86EFAC","#4ADE80","#22C55E","#16A34A","#15803D","#166534","#14532D","#052E16"] },
-  alerta:    { hex: "#F59E0B", brand: 500, scale: ["#FFFBEB","#FEF3C7","#FDE68A","#FCD34D","#FBBF24","#F59E0B","#D97706","#B45309","#92400E","#78350F","#451A03"] },
-  erro:      { hex: "#EF4444", brand: 500, scale: ["#FEF2F2","#FEE2E2","#FECACA","#FCA5A5","#F87171","#EF4444","#DC2626","#B91C1C","#991B1B","#7F1D1D","#450A0A"] },
-  info:      { hex: "#3B82F6", brand: 500, scale: ["#EFF6FF","#DBEAFE","#BFDBFE","#93C5FD","#60A5FA","#3B82F6","#2563EB","#1D4ED8","#1E40AF","#1E3A8A","#172554"] },
-  esmeralda: { hex: "#10B981", brand: 500, scale: ["#ECFDF5","#D1FAE5","#A7F3D0","#6EE7B7","#34D399","#10B981","#059669","#047857","#065F46","#064E3B","#022C22"] },
-  turquesa:  { hex: "#14B8A6", brand: 500, scale: ["#F0FDFA","#CCFBF1","#99F6E4","#5EEAD4","#2DD4BF","#14B8A6","#0D9488","#0F766E","#115E59","#134E4A","#042F2E"] },
-  ceu:       { hex: "#0EA5E9", brand: 500, scale: ["#F0F9FF","#E0F2FE","#BAE6FD","#7DD3FC","#38BDF8","#0EA5E9","#0284C7","#0369A1","#075985","#0C4A6E","#082F49"] },
-  indigo:    { hex: "#6366F1", brand: 500, scale: ["#EEF2FF","#E0E7FF","#C7D2FE","#A5B4FC","#818CF8","#6366F1","#4F46E5","#4338CA","#3730A3","#312E81","#1E1B4B"] },
-  laranja:   { hex: "#F97316", brand: 500, scale: ["#FFF7ED","#FFEDD5","#FED7AA","#FDBA74","#FB923C","#F97316","#EA580C","#C2410C","#9A3412","#7C2D12","#431407"] },
+  sucesso:   { hex: "#22C55E", scale: ["#F0FDF4","#DCFCE7","#BBF7D0","#86EFAC","#4ADE80","#22C55E","#16A34A","#15803D","#166534","#14532D","#052E16"] },
+  alerta:    { hex: "#F59E0B", scale: ["#FFFBEB","#FEF3C7","#FDE68A","#FCD34D","#FBBF24","#F59E0B","#D97706","#B45309","#92400E","#78350F","#451A03"] },
+  erro:      { hex: "#EF4444", scale: ["#FEF2F2","#FEE2E2","#FECACA","#FCA5A5","#F87171","#EF4444","#DC2626","#B91C1C","#991B1B","#7F1D1D","#450A0A"] },
+  info:      { hex: "#3B82F6", scale: ["#EFF6FF","#DBEAFE","#BFDBFE","#93C5FD","#60A5FA","#3B82F6","#2563EB","#1D4ED8","#1E40AF","#1E3A8A","#172554"] },
+  esmeralda: { hex: "#10B981", scale: ["#ECFDF5","#D1FAE5","#A7F3D0","#6EE7B7","#34D399","#10B981","#059669","#047857","#065F46","#064E3B","#022C22"] },
+  turquesa:  { hex: "#14B8A6", scale: ["#F0FDFA","#CCFBF1","#99F6E4","#5EEAD4","#2DD4BF","#14B8A6","#0D9488","#0F766E","#115E59","#134E4A","#042F2E"] },
+  ceu:       { hex: "#0EA5E9", scale: ["#F0F9FF","#E0F2FE","#BAE6FD","#7DD3FC","#38BDF8","#0EA5E9","#0284C7","#0369A1","#075985","#0C4A6E","#082F49"] },
+  indigo:    { hex: "#6366F1", scale: ["#EEF2FF","#E0E7FF","#C7D2FE","#A5B4FC","#818CF8","#6366F1","#4F46E5","#4338CA","#3730A3","#312E81","#1E1B4B"] },
+  laranja:   { hex: "#F97316", scale: ["#FFF7ED","#FFEDD5","#FED7AA","#FDBA74","#FB923C","#F97316","#EA580C","#C2410C","#9A3412","#7C2D12","#431407"] },
 };
 const OPACITY_STEPS = [1, 3, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
@@ -96,7 +96,7 @@ function ScaleRow({ name, paletteKey, hint }: { name: string; paletteKey: keyof 
           <p className="text-[14px] text-[#212121]" style={{ fontWeight: 700 }}>{name}</p>
           <span className="text-[11px] font-mono text-[#9a9a9a]">{p.hex}</span>
         </div>
-        <span className="text-[11px] text-[#9a9a9a]">{hint || `11 steps · Brand ${p.brand}`}</span>
+        <span className="text-[11px] text-[#9a9a9a]">{hint || (p.brand ? `11 steps · Brand ${p.brand}` : "11 steps")}</span>
       </div>
       <div className="grid" style={{ gridTemplateColumns: "repeat(11, minmax(0,1fr))", gap: 4 }}>
         {p.scale.map((hex, i) => {
