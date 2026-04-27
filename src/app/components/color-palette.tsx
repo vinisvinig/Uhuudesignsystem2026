@@ -1332,10 +1332,9 @@ export function ColorPalette() {
               <p className="text-[12px] text-[#9a9a9a] mb-4">Pesos disponíveis</p>
               <div className="flex flex-wrap gap-8">
                 {[
-                  { weight: 300, label: "Light" },
                   { weight: 400, label: "Regular" },
                   { weight: 500, label: "Medium" },
-                  { weight: 600, label: "SemiBold" },
+                  { weight: 600, label: "Semi Bold" },
                   { weight: 700, label: "Bold" },
                 ].map(w => (
                   <div key={w.weight} className="flex flex-col items-center gap-1">
@@ -1359,14 +1358,12 @@ export function ColorPalette() {
                   ))}
                 </div>
                 {([
-                  { name: "xs", size: 12 }, { name: "sm", size: 14 }, { name: "xl", size: 16 },
-                  { name: "2xl", size: 20 }, { name: "3xl", size: 24 }, { name: "4xl", size: 28 },
-                  { name: "5xl", size: 32 }, { name: "6xl", size: 36 }, { name: "7xl", size: 40 },
-                  { name: "8xl", size: 48 }, { name: "9xl", size: 56 },
+                  { name: "xs", size: 12 }, { name: "sm", size: 14 }, { name: "base", size: 16 },
+                  { name: "lg", size: 18 }, { name: "xl", size: 20 }, { name: "2xl", size: 24 },
+                  { name: "3xl", size: 30 }, { name: "4xl", size: 36 }, { name: "5xl", size: 48 },
+                  { name: "6xl", size: 60 }, { name: "7xl", size: 72 },
                 ] as const).flatMap((s, i) => {
-                  const variants = s.name === "xs"
-                    ? [{ w: 400, label: "Regular" }]
-                    : [{ w: 400, label: "Regular" }, { w: 500, label: "Medium" }, { w: 600, label: "Semi Bold" }, { w: 700, label: "Bold" }];
+                  const variants = [{ w: 400, label: "Regular" }, { w: 500, label: "Medium" }, { w: 600, label: "Semi Bold" }, { w: 700, label: "Bold" }];
                   return variants.map(v => ({
                     key: `${s.name}-${v.w}`,
                     name: `Text ${s.name}${v.label === "Regular" ? "" : ` ${v.label}`}`,
@@ -1463,10 +1460,9 @@ export function ColorPalette() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { weight: 300, label: "Light", usage: "Textos decorativos, backgrounds, elementos muito secundários", example: "Desenvolvido com carinho para você", sizes: [32, 24, 18] },
                   { weight: 400, label: "Regular", usage: "Texto padrão, body, descrições gerais", example: "Descrição do evento com detalhes completos", sizes: [18, 16, 14] },
                   { weight: 500, label: "Medium", usage: "Subtítulos, labels, textos com ênfase leve", example: "Próximos eventos na sua cidade", sizes: [24, 18, 16] },
-                  { weight: 600, label: "SemiBold", usage: "Títulos, labels importantes, botões", example: "Comprar Ingressos", sizes: [28, 24, 18] },
+                  { weight: 600, label: "Semi Bold", usage: "Títulos, labels importantes, botões", example: "Comprar Ingressos", sizes: [28, 24, 18] },
                   { weight: 700, label: "Bold", usage: "Títulos principais, destaques máximos", example: "ZZ TOP – THE BIG ONE", sizes: [40, 32, 24] },
                 ].map(w => (
                   <div key={w.weight} className="bg-white border border-[#e0e0e0] rounded-xl overflow-hidden hover:border-[#ee3680]/30 transition-colors">
