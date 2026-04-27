@@ -2019,81 +2019,240 @@ export function ColorPalette() {
 
         {/* ===== TAB: USO & EXEMPLOS ===== */}
         {activeTab === "usage" && (
-          <div className="space-y-8">
+          <div className="space-y-12" style={{ fontFamily: "'Barlow', sans-serif" }}>
+
+            {/* ── HEADER DE EVENTO ── */}
             <div>
-              <h3 className="text-[#1a1a1a] mb-4">Card de Evento &middot; Preview</h3>
-              <div className="max-w-sm bg-white rounded-xl border border-[#e0e0e0] overflow-hidden shadow-sm">
-                <div className="h-40 bg-gradient-to-br from-[#6900b2] to-[#ee3680] flex items-center justify-center text-white/60 text-[13px]">
-                  Imagem do Evento
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[11px] px-2 py-0.5 bg-[#f0f9e6] text-[#3d5a1a] rounded-full">Disponível</span>
-                    <span className="text-[11px] text-[#9a9a9a]">25 Jun 2026</span>
-                  </div>
-                  <h4 className="text-[#1a1a1a] mb-1">Festival de Música 2026</h4>
-                  <p className="text-[13px] text-[#484543] mb-4">São Paulo &middot; Allianz Parque</p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-[12px] text-[#9a9a9a]">A partir de</span>
-                      <p className="text-[#ee3680]">R$ 89,90</p>
+              <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Header de Evento</h3>
+              <p className="text-[13px] text-[#9a9a9a] mb-5">Banner com gradiente, nome do artista, data e botão de compra.</p>
+              <div className="rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #8036EE 0%, #EE3680 30%, #EE3680 70%, #F97316 100%)", padding: "40px 32px" }}>
+                <div className="flex items-start justify-between flex-wrap gap-6">
+                  <div>
+                    <span className="text-[11px] px-3 py-1 rounded-full bg-white/20 text-white" style={{ fontWeight: 600, letterSpacing: "0.5px", textTransform: "uppercase" }}>Show · Rock Nacional</span>
+                    <h2 className="text-white mt-3 mb-1" style={{ fontWeight: 700, fontSize: 40, lineHeight: 1.1 }}>Titãs · Encontro</h2>
+                    <p className="text-white/80" style={{ fontSize: 16 }}>Sábado, 14 de Junho de 2026 · 21h</p>
+                    <p className="text-white/60" style={{ fontSize: 14, marginTop: 4 }}>Allianz Parque · São Paulo, SP</p>
+                    <div className="flex items-center gap-3 mt-5">
+                      <div>
+                        <p className="text-white/60" style={{ fontSize: 11 }}>A partir de</p>
+                        <p className="text-white" style={{ fontWeight: 700, fontSize: 28 }}>R$ 120,00</p>
+                      </div>
+                      <button className="px-6 py-3 bg-white text-[#EE3680] rounded-xl" style={{ fontWeight: 700, fontSize: 15 }}>Comprar Ingresso</button>
                     </div>
-                    <button className="px-5 py-2.5 bg-[#ee3680] text-white rounded-lg hover:bg-[#d42e70] transition-colors">
-                      Comprar
-                    </button>
+                  </div>
+                  <div className="bg-white/10 rounded-xl px-6 py-4 text-white text-center hidden md:block">
+                    <p style={{ fontSize: 11, opacity: 0.7, textTransform: "uppercase", letterSpacing: "0.5px" }}>Ingressos</p>
+                    <p style={{ fontWeight: 700, fontSize: 32 }}>847</p>
+                    <p style={{ fontSize: 12, opacity: 0.7 }}>disponíveis</p>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* ── CARD DE INGRESSO ── */}
             <div>
-              <h3 className="text-[#1a1a1a] mb-4">Tokens CSS &middot; Copie e Use</h3>
-              <div className="bg-[#1a1a1a] rounded-xl p-6 overflow-x-auto">
-                <pre className="text-[13px] text-[#e0e0e0] leading-relaxed">
-{`:root {
-  /* Primary */
-  --color-primary: #ee3680;
-  --color-primary-hover: #d91e63;
-  --color-primary-active: #c2185b;
-  --color-primary-disabled: #e0e0e0;
-
-  /* Secondary */
-  --color-secondary: #6900b2;
-  --color-secondary-hover: #5a0099;
-  --color-secondary-active: #4c0080;
-
-  /* Semantic */
-  --color-success: #8dc73f;
-  --color-success-light: #f4f9ec;
-  --color-error: #da0000;
-  --color-error-light: #ffe6e6;
-  --color-warning: #ffa500;
-  --color-warning-light: #fff3e0;
-  --color-info: #6900b2;
-  --color-info-light: #f0e6f7;
-
-  /* Text */
-  --color-text-primary: #212121;
-  --color-text-secondary: #484543;
-  --color-text-tertiary: #9a9a9a;
-  --color-text-disabled: #d7d7d7;
-  --color-text-inverse: #ffffff;
-
-  /* Background */
-  --color-bg-primary: #fafafa;
-  --color-bg-secondary: #f5f5f5;
-  --color-bg-card: #ffffff;
-  --color-bg-dark: #1a1a1a;
-  --color-bg-overlay: rgba(0, 0, 0, 0.5);
-
-  /* Border */
-  --color-border-light: #e0e0e0;
-  --color-border-medium: #d7d7d7;
-  --color-border-dark: #9a9a9a;
-}`}
-                </pre>
+              <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Card de Ingresso</h3>
+              <p className="text-[13px] text-[#9a9a9a] mb-5">Layout com QR code, nome do evento, data, setor e status.</p>
+              <div className="flex flex-wrap gap-4">
+                {[
+                  { status: "Ativo", statusColor: "#22C55E", statusBg: "rgba(34,197,94,0.1)", setor: "Pista Premium", evento: "Titãs · Encontro", data: "14 Jun 2026 · 21h", local: "Allianz Parque, SP", code: "UHU-48291" },
+                  { status: "Usado", statusColor: "#9a9a9a", statusBg: "#f5f5f5", setor: "Cadeira Superior", evento: "Rock in Rio 2026", data: "20 Set 2026 · 18h", local: "Cidade do Rock, RJ", code: "UHU-73015" },
+                  { status: "Cancelado", statusColor: "#EF4444", statusBg: "rgba(239,68,68,0.1)", setor: "VIP Lounge", evento: "Lollapalooza BR", data: "28 Mar 2026 · 14h", local: "Autódromo, SP", code: "UHU-61847" },
+                ].map(t => (
+                  <div key={t.status} className="bg-white border border-[#e0e0e0] rounded-2xl overflow-hidden" style={{ width: 300, opacity: t.status === "Cancelado" ? 0.65 : 1 }}>
+                    <div className="px-5 pt-5 pb-4 border-b border-[#f0f0f0]">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-[11px] px-2.5 py-1 rounded-full" style={{ background: t.statusBg, color: t.statusColor, fontWeight: 600 }}>{t.status}</span>
+                        <span className="text-[11px] text-[#9a9a9a] font-mono">#{t.code}</span>
+                      </div>
+                      <p className="text-[#212121] mb-0.5" style={{ fontWeight: 700, fontSize: 16 }}>{t.evento}</p>
+                      <p className="text-[#484543]" style={{ fontSize: 13 }}>{t.data}</p>
+                      <p className="text-[#9a9a9a]" style={{ fontSize: 12 }}>{t.local}</p>
+                    </div>
+                    <div className="px-5 py-4 flex items-center justify-between">
+                      <div>
+                        <p className="text-[11px] text-[#9a9a9a] mb-0.5">Setor</p>
+                        <p className="text-[#212121]" style={{ fontWeight: 600, fontSize: 14 }}>{t.setor}</p>
+                      </div>
+                      <div className="w-14 h-14 bg-[#f5f5f5] rounded-lg flex items-center justify-center">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                          <rect x="2" y="2" width="12" height="12" rx="1" fill="#212121"/>
+                          <rect x="26" y="2" width="12" height="12" rx="1" fill="#212121"/>
+                          <rect x="2" y="26" width="12" height="12" rx="1" fill="#212121"/>
+                          <rect x="5" y="5" width="6" height="6" fill="white"/>
+                          <rect x="29" y="5" width="6" height="6" fill="white"/>
+                          <rect x="5" y="29" width="6" height="6" fill="white"/>
+                          <rect x="18" y="2" width="3" height="3" fill="#212121"/>
+                          <rect x="22" y="2" width="3" height="3" fill="#212121"/>
+                          <rect x="18" y="6" width="3" height="3" fill="#212121"/>
+                          <rect x="26" y="18" width="3" height="3" fill="#212121"/>
+                          <rect x="30" y="18" width="3" height="3" fill="#212121"/>
+                          <rect x="34" y="18" width="3" height="3" fill="#212121"/>
+                          <rect x="18" y="18" width="3" height="3" fill="#212121"/>
+                          <rect x="22" y="22" width="3" height="3" fill="#212121"/>
+                          <rect x="18" y="26" width="3" height="3" fill="#212121"/>
+                          <rect x="26" y="30" width="3" height="3" fill="#212121"/>
+                          <rect x="30" y="26" width="3" height="3" fill="#212121"/>
+                          <rect x="34" y="30" width="3" height="3" fill="#212121"/>
+                          <rect x="2" y="18" width="3" height="3" fill="#212121"/>
+                          <rect x="6" y="18" width="3" height="3" fill="#212121"/>
+                          <rect x="10" y="22" width="3" height="3" fill="#212121"/>
+                          <rect x="14" y="18" width="3" height="3" fill="#212121"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
+
+            {/* ── NOTIFICAÇÕES / TOASTS ── */}
+            <div>
+              <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Notificações · Toasts</h3>
+              <p className="text-[13px] text-[#9a9a9a] mb-5">Cores semânticas aplicadas em feedbacks ao usuário.</p>
+              <div className="space-y-3 max-w-lg">
+                {[
+                  { type: "sucesso", icon: "✓", iconBg: "#22C55E", bg: "rgba(34,197,94,0.08)", border: "rgba(34,197,94,0.25)", title: "Compra realizada!", msg: "Seus ingressos foram enviados para maria@uhuu.com" },
+                  { type: "alerta", icon: "!", iconBg: "#F59E0B", bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.25)", title: "Poucos ingressos", msg: "Restam apenas 3 ingressos para Pista Premium" },
+                  { type: "erro", icon: "✕", iconBg: "#EF4444", bg: "rgba(239,68,68,0.08)", border: "rgba(239,68,68,0.25)", title: "Pagamento recusado", msg: "Verifique os dados do cartão e tente novamente" },
+                  { type: "info", icon: "i", iconBg: "#3B82F6", bg: "rgba(59,130,246,0.08)", border: "rgba(59,130,246,0.25)", title: "Lembrete de evento", msg: "Titãs · Encontro começa em 2 horas. Boa diversão!" },
+                ].map(n => (
+                  <div key={n.type} className="flex items-start gap-3 px-4 py-3 rounded-xl" style={{ background: n.bg, border: `1px solid ${n.border}` }}>
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5" style={{ background: n.iconBg }}>
+                      <span className="text-white" style={{ fontSize: 13, fontWeight: 700 }}>{n.icon}</span>
+                    </div>
+                    <div>
+                      <p className="text-[#212121]" style={{ fontWeight: 600, fontSize: 14 }}>{n.title}</p>
+                      <p className="text-[#484543]" style={{ fontSize: 13 }}>{n.msg}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ── BADGES E TAGS ── */}
+            <div>
+              <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Badges · Tags</h3>
+              <p className="text-[13px] text-[#9a9a9a] mb-5">Categorias de evento e status usando as cores de Suporte e Semânticas.</p>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-[11px] text-[#9a9a9a] mb-2" style={{ fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px" }}>Categorias</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { label: "Show", bg: "rgba(238,54,128,0.1)", color: "#EE3680" },
+                      { label: "Teatro", bg: "rgba(128,54,238,0.1)", color: "#8036EE" },
+                      { label: "Esporte", bg: "rgba(14,165,233,0.1)", color: "#0EA5E9" },
+                      { label: "Festival", bg: "rgba(249,115,22,0.1)", color: "#F97316" },
+                      { label: "Stand-up", bg: "rgba(99,102,241,0.1)", color: "#6366F1" },
+                      { label: "Exposição", bg: "rgba(16,185,129,0.1)", color: "#10B981" },
+                      { label: "Circo", bg: "rgba(20,184,166,0.1)", color: "#14B8A6" },
+                    ].map(b => (
+                      <span key={b.label} className="px-3 py-1 rounded-full text-[12px]" style={{ background: b.bg, color: b.color, fontWeight: 600 }}>{b.label}</span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[11px] text-[#9a9a9a] mb-2" style={{ fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px" }}>Status</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { label: "Disponível", bg: "rgba(34,197,94,0.1)", color: "#22C55E", dot: "#22C55E" },
+                      { label: "Esgotado", bg: "rgba(239,68,68,0.1)", color: "#EF4444", dot: "#EF4444" },
+                      { label: "Em breve", bg: "rgba(245,158,11,0.1)", color: "#F59E0B", dot: "#F59E0B" },
+                      { label: "Gratuito", bg: "rgba(59,130,246,0.1)", color: "#3B82F6", dot: "#3B82F6" },
+                      { label: "Cancelado", bg: "#f5f5f5", color: "#9a9a9a", dot: "#9a9a9a" },
+                    ].map(b => (
+                      <span key={b.label} className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px]" style={{ background: b.bg, color: b.color, fontWeight: 600 }}>
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ background: b.dot }} />
+                        {b.label}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ── PILL DE PREÇO ── */}
+            <div>
+              <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Pill de Preço</h3>
+              <p className="text-[13px] text-[#9a9a9a] mb-5">Componente de preço com "a partir de", valor em destaque e parcelamento.</p>
+              <div className="flex flex-wrap gap-4">
+                {[
+                  { label: "Pista", from: "R$ 89,90", installment: "3x R$ 29,97", available: true },
+                  { label: "Pista Premium", from: "R$ 180,00", installment: "6x R$ 30,00", available: true },
+                  { label: "Cadeira", from: "R$ 240,00", installment: "12x R$ 20,00", available: false },
+                  { label: "VIP Lounge", from: "R$ 480,00", installment: "12x R$ 40,00", available: true },
+                ].map(p => (
+                  <div key={p.label} className="bg-white border rounded-xl px-5 py-4" style={{ borderColor: p.available ? "#e0e0e0" : "#f0f0f0", minWidth: 160, opacity: p.available ? 1 : 0.5 }}>
+                    <p className="text-[11px] text-[#9a9a9a] mb-1" style={{ fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px" }}>{p.label}</p>
+                    <p className="text-[11px] text-[#9a9a9a]">A partir de</p>
+                    <p className="text-[#EE3680]" style={{ fontWeight: 700, fontSize: 22 }}>{p.from}</p>
+                    <p className="text-[#9a9a9a]" style={{ fontSize: 11 }}>{p.installment} sem juros</p>
+                    {!p.available && <p className="text-[#EF4444] mt-2" style={{ fontSize: 11, fontWeight: 600 }}>Esgotado</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ── CHECKOUT ── */}
+            <div>
+              <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Checkout · Resumo do Pedido</h3>
+              <p className="text-[13px] text-[#9a9a9a] mb-5">Mini-preview do fluxo: resumo, cupom e botão de pagamento.</p>
+              <div className="max-w-md bg-white border border-[#e0e0e0] rounded-2xl overflow-hidden">
+                <div className="px-6 py-4 border-b border-[#f0f0f0]">
+                  <p className="text-[#212121]" style={{ fontWeight: 700, fontSize: 16 }}>Resumo do Pedido</p>
+                </div>
+                <div className="px-6 py-4 space-y-3">
+                  <div className="flex justify-between">
+                    <div>
+                      <p className="text-[#212121]" style={{ fontWeight: 600, fontSize: 14 }}>Titãs · Encontro</p>
+                      <p className="text-[#9a9a9a]" style={{ fontSize: 12 }}>Pista Premium · 2 ingressos</p>
+                    </div>
+                    <p className="text-[#212121]" style={{ fontWeight: 600 }}>R$ 360,00</p>
+                  </div>
+                  <div className="flex justify-between text-[13px] text-[#9a9a9a]">
+                    <span>Taxa de serviço</span>
+                    <span>R$ 36,00</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <input placeholder="Cupom de desconto" className="flex-1" style={{ height: 40, padding: "0 12px", border: "1px solid #e0e0e0", borderRadius: 8, fontSize: 13, fontFamily: "'Barlow', sans-serif", outline: "none" }} />
+                    <button className="px-4 py-2 border border-[#EE3680] text-[#EE3680] rounded-lg" style={{ fontSize: 13, fontWeight: 600 }}>Aplicar</button>
+                  </div>
+                  <div className="border-t border-[#f0f0f0] pt-3 flex justify-between">
+                    <p className="text-[#212121]" style={{ fontWeight: 700 }}>Total</p>
+                    <div className="text-right">
+                      <p className="text-[#EE3680]" style={{ fontWeight: 700, fontSize: 20 }}>R$ 396,00</p>
+                      <p className="text-[#9a9a9a]" style={{ fontSize: 11 }}>12x R$ 33,00 sem juros</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="px-6 pb-5">
+                  <button className="w-full py-3.5 rounded-xl text-white" style={{ background: "linear-gradient(135deg, #8036EE 0%, #EE3680 40%, #EE3680 100%)", fontWeight: 700, fontSize: 15 }}>Finalizar Compra</button>
+                  <p className="text-center text-[11px] text-[#9a9a9a] mt-2">🔒 Pagamento 100% seguro · SSL</p>
+                </div>
+              </div>
+            </div>
+
+            {/* ── ESTADO VAZIO ── */}
+            <div>
+              <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Estado Vazio</h3>
+              <p className="text-[13px] text-[#9a9a9a] mb-5">Tela de nenhum resultado encontrado com CTA.</p>
+              <div className="bg-white border border-[#e0e0e0] rounded-2xl px-8 py-12 max-w-md flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-full flex items-center justify-center mb-5" style={{ background: "rgba(238,54,128,0.08)" }}>
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <circle cx="16" cy="16" r="10" stroke="#EE3680" strokeWidth="2.5"/>
+                    <line x1="23" y1="23" x2="32" y2="32" stroke="#EE3680" strokeWidth="2.5" strokeLinecap="round"/>
+                    <line x1="12" y1="16" x2="20" y2="16" stroke="#EE3680" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <p className="text-[#212121] mb-2" style={{ fontWeight: 700, fontSize: 18 }}>Nenhum evento encontrado</p>
+                <p className="text-[#9a9a9a] mb-6" style={{ fontSize: 14 }}>Tente buscar por outro artista, cidade ou data. Novos eventos são adicionados toda semana.</p>
+                <div className="flex gap-3">
+                  <button className="px-5 py-2.5 border border-[#e0e0e0] text-[#484543] rounded-lg" style={{ fontSize: 14, fontWeight: 600 }}>Limpar filtros</button>
+                  <button className="px-5 py-2.5 bg-[#EE3680] text-white rounded-lg" style={{ fontSize: 14, fontWeight: 600 }}>Ver todos os eventos</button>
+                </div>
+              </div>
+            </div>
+
           </div>
         )}
       </div>
