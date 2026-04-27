@@ -274,7 +274,7 @@ export function ColorPalette() {
   return (
     <div className="min-h-screen bg-[#fafafa]">
       {/* Header */}
-      <div className="text-white px-8 py-10" style={{ background: "linear-gradient(135deg, #D91E63, #E67300)" }}>
+      <div className="text-white px-8 py-10" style={{ background: "linear-gradient(135deg, #9236EE 0%, #EE3680 38%, #EE3680 100%)" }}>
         <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between gap-3 mb-2">
             <div className="flex items-center gap-3">
