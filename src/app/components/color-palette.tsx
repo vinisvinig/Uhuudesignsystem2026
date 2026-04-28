@@ -83,7 +83,7 @@ const PALETTES: Record<string, { hex: string; brand?: number; scale: string[] }>
   turquesa:  { hex: "#14B8A6", scale: ["#F0FDFA","#CCFBF1","#99F6E4","#5EEAD4","#2DD4BF","#14B8A6","#0D9488","#0F766E","#115E59","#134E4A","#042F2E"] },
   ceu:       { hex: "#0EA5E9", scale: ["#F0F9FF","#E0F2FE","#BAE6FD","#7DD3FC","#38BDF8","#0EA5E9","#0284C7","#0369A1","#075985","#0C4A6E","#082F49"] },
   indigo:    { hex: "#6366F1", scale: ["#EEF2FF","#E0E7FF","#C7D2FE","#A5B4FC","#818CF8","#6366F1","#4F46E5","#4338CA","#3730A3","#312E81","#1E1B4B"] },
-  laranja:   { hex: "#F97316", scale: ["#FFF7ED","#FFEDD5","#FED7AA","#FDBA74","#FB923C","#F97316","#EA580C","#C2410C","#9A3412","#7C2D12","#431407"] },
+  laranja:   { hex: "#FF8000", scale: ["#FFF7EF","#FFEDDB","#FFD8B2","#FFBC7A","#FF9E3D","#FF8000","#CC6600","#9A4F03","#6F3105","#4B1F06","#2D1205"] },
 };
 const OPACITY_STEPS = [1, 3, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
@@ -274,7 +274,7 @@ export function ColorPalette() {
   return (
     <div className="min-h-screen bg-[#fafafa]">
       {/* Header */}
-      <div className="text-white px-8 py-10" style={{ background: "linear-gradient(135deg, #8036EE 0%, #EE3680 22%, #EE3680 72%, #F97316 100%)" }}>
+      <div className="text-white px-8 py-10" style={{ background: "linear-gradient(135deg, #8036EE 0%, #EE3680 22%, #EE3680 72%, #FF8000 100%)" }}>
         <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between gap-3 mb-2">
             <div className="flex items-center gap-3">
@@ -490,7 +490,7 @@ export function ColorPalette() {
   --color-support-teal: #14B8A6;
   --color-support-sky: #0EA5E9;
   --color-support-indigo: #6366F1;
-  --color-support-orange: #F97316;
+  --color-support-orange: #FF8000;
 
   /* ── Semânticas ── */
   --color-success: #22C55E;
@@ -2025,7 +2025,7 @@ export function ColorPalette() {
             <div>
               <h3 className="text-[#1a1a1a] mb-1" style={{ fontWeight: 700, fontSize: 20 }}>Header de Evento</h3>
               <p className="text-[13px] text-[#9a9a9a] mb-5">Banner com gradiente, nome do artista, data e botão de compra.</p>
-              <div className="rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #8036EE 0%, #EE3680 30%, #EE3680 70%, #F97316 100%)", padding: "40px 32px" }}>
+              <div className="rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #8036EE 0%, #EE3680 30%, #EE3680 70%, #FF8000 100%)", padding: "40px 32px" }}>
                 <div className="flex items-start justify-between flex-wrap gap-6">
                   <div>
                     <span className="text-[11px] px-3 py-1 rounded-full bg-white/20 text-white" style={{ fontWeight: 600, letterSpacing: "0.5px", textTransform: "uppercase" }}>Show · Rock Nacional</span>
@@ -2142,7 +2142,7 @@ export function ColorPalette() {
                       { label: "Show", bg: "rgba(238,54,128,0.1)", color: "#EE3680" },
                       { label: "Teatro", bg: "rgba(128,54,238,0.1)", color: "#8036EE" },
                       { label: "Esporte", bg: "rgba(14,165,233,0.1)", color: "#0EA5E9" },
-                      { label: "Festival", bg: "rgba(249,115,22,0.1)", color: "#F97316" },
+                      { label: "Festival", bg: "rgba(255,128,0,0.1)", color: "#FF8000" },
                       { label: "Stand-up", bg: "rgba(99,102,241,0.1)", color: "#6366F1" },
                       { label: "Exposição", bg: "rgba(16,185,129,0.1)", color: "#10B981" },
                       { label: "Circo", bg: "rgba(20,184,166,0.1)", color: "#14B8A6" },
